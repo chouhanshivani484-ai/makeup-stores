@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CareerConnect | Modern Job Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f2f0f0",
+                        "outline-variant": "#c1c6d7",
+                        "surface-container": "#efeded",
+                        "on-surface": "#1b1c1c",
+                        "on-tertiary-container": "#4d3e00",
+                        "surface": "#fbf9f8",
+                        "on-primary-fixed-variant": "#004493",
+                        "surface-container-low": "#f5f3f3",
+                        "tertiary-container": "#cba800",
+                        "on-tertiary-fixed": "#231b00",
+                        "surface-variant": "#e4e2e2",
+                        "on-secondary-fixed-variant": "#354475",
+                        "inverse-surface": "#303031",
+                        "secondary": "#4d5c8f",
+                        "on-primary-fixed": "#001a41",
+                        "tertiary": "#715d00",
+                        "outline": "#717786",
+                        "secondary-fixed": "#dbe1ff",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e9e8e7",
+                        "primary-fixed-dim": "#adc7ff",
+                        "primary": "#0059bb",
+                        "on-surface-variant": "#414754",
+                        "secondary-container": "#b5c4fe",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#554500",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#041848",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "background": "#fbf9f8",
+                        "surface-tint": "#005bc0",
+                        "surface-bright": "#fbf9f8",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#ffe177",
+                        "on-background": "#1b1c1c",
+                        "on-primary-container": "#fefcff",
+                        "on-secondary-container": "#415082",
+                        "inverse-primary": "#adc7ff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#0070ea",
+                        "surface-container-highest": "#e4e2e2",
+                        "secondary-fixed-dim": "#b5c4fe",
+                        "surface-dim": "#dbdad9",
+                        "tertiary-fixed-dim": "#ebc300",
+                        "primary-fixed": "#d8e2ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "40px",
+                        "md": "24px",
+                        "container-max": "1200px",
+                        "xl": "64px",
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Manrope"],
+                        "headline-sm": ["Manrope"],
+                        "label-sm": ["Manrope"],
+                        "headline-xl": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "body-sm": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-sm": ["18px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "headline-xl": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.25", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-surface-dim shadow-sm h-20 transition-all">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-md h-full">
+<div class="flex items-center gap-xs cursor-pointer active:scale-95 duration-200">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim text-headline-lg">work</span>
+<span class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim">CareerConnect</span>
+</div>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary font-bold pb-1 hover:text-primary transition-colors" href="#">Find Jobs</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-primary transition-colors" href="#">Companies</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-primary transition-colors" href="#">Salaries</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-primary transition-colors" href="#">Career Advice</a>
+</nav>
+<div class="flex items-center gap-sm">
+<button class="material-symbols-outlined p-base text-on-surface-variant hover:bg-surface-variant rounded-full transition-colors">search</button>
+<button class="bg-tertiary-container text-on-tertiary-container font-label-md px-md py-base rounded-lg hidden md:block hover:opacity-90 transition-all cursor-pointer active:scale-95">Post a Job</button>
+<button class="material-symbols-outlined md:hidden p-base text-on-surface-variant">menu</button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative py-xl bg-surface-container-low overflow-hidden">
+<div class="max-w-container-max mx-auto px-md grid grid-cols-1 lg:grid-cols-2 items-center gap-xl relative z-10">
+<div class="flex flex-col gap-md">
+<h1 class="font-headline-xl text-headline-xl text-on-surface leading-tight">Find Your Dream <span class="text-primary">Job Today</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">Discover 100,000+ opportunities across top industries. Connect with verified employers and take the next step in your professional journey.</p>
+<!-- Search Bar -->
+<div class="bg-surface-container-lowest p-sm rounded-xl shadow-lg border border-outline-variant flex flex-col md:flex-row items-center gap-sm mt-md">
+<div class="flex items-center gap-base w-full md:border-r border-outline-variant pr-md">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-body-md outline-none" placeholder="Job title, keywords..." type="text"/>
+</div>
+<div class="flex items-center gap-base w-full md:border-r border-outline-variant pr-md px-md">
+<span class="material-symbols-outlined text-outline">location_on</span>
+<input class="bg-transparent border-none focus:ring-0 w-full text-body-md outline-none" placeholder="City or Remote" type="text"/>
+</div>
+<div class="flex items-center gap-base w-full px-md md:w-auto">
+<span class="material-symbols-outlined text-outline">work_history</span>
+<select class="bg-transparent border-none focus:ring-0 text-body-md outline-none appearance-none cursor-pointer">
+<option>Experience</option>
+<option>Entry Level</option>
+<option>Mid-Level</option>
+<option>Senior</option>
+</select>
+</div>
+<button class="bg-primary text-on-primary font-label-md px-xl py-sm rounded-lg w-full md:w-auto hover:bg-primary-container transition-colors shadow-sm">Search</button>
+</div>
+</div>
+<div class="hidden lg:block relative h-[500px]">
+<div class="absolute inset-0 bg-primary-container/10 rounded-[40px] -rotate-3"></div>
+<img alt="Hero Image" class="absolute inset-0 w-full h-full object-cover rounded-[40px] shadow-xl" data-alt="A professional young woman working on a laptop in a bright, modern open-plan office. She is smiling confidently, surrounded by soft bokeh backgrounds of corporate greenery and sleek architecture. The lighting is warm and inviting, emphasizing a collaborative and productive atmosphere with a modern business aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB62Hyn9fLzVBu4XltkyCaBPHZG0RB9hQrWdasRp1QUzzo1zfHYvZKkeFpFq3KLLTSOZIY-JsSJPOAVCCG4iU3ZQcur7cfxQQ938NpUHMrcPisObJLJ-NDc0pen3pzjQvNS7DynwFy0VG1bMBLNIxPXnmGQDvroQQYMwgQF63hWmU1JXIvI7RVTeXkrTNS_D1ZEOdZDWfVNCDZ5tHdX-fUL-rPKvlnBSFvQ-U_4XEo95ZIPEoZtXMlx8pwnZJ4_Vr8Ssi5IJBD6Uk0"/>
+</div>
+</div>
+</section>
+<!-- Job Categories -->
+<section class="py-xl">
+<div class="max-w-container-max mx-auto px-md">
+<div class="flex justify-between items-end mb-lg">
+<h2 class="font-headline-lg text-headline-lg">Browse by <span class="text-primary">Category</span></h2>
+<a class="text-primary font-label-md flex items-center gap-xs hover:underline" href="#">View All Categories <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-md">
+<div class="bg-surface-container p-lg rounded-xl flex flex-col items-center gap-sm group hover:bg-primary hover:text-on-primary transition-all duration-300 cursor-pointer shadow-sm">
+<span class="material-symbols-outlined text-headline-xl text-primary group-hover:text-on-primary">computer</span>
+<span class="font-headline-sm text-headline-sm">IT &amp; Tech</span>
+<span class="font-label-sm text-label-sm opacity-70">1.2k+ Jobs</span>
+</div>
+<div class="bg-surface-container p-lg rounded-xl flex flex-col items-center gap-sm group hover:bg-primary hover:text-on-primary transition-all duration-300 cursor-pointer shadow-sm">
+<span class="material-symbols-outlined text-headline-xl text-primary group-hover:text-on-primary">campaign</span>
+<span class="font-headline-sm text-headline-sm">Marketing</span>
+<span class="font-label-sm text-label-sm opacity-70">850 Jobs</span>
+</div>
+<div class="bg-surface-container p-lg rounded-xl flex flex-col items-center gap-sm group hover:bg-primary hover:text-on-primary transition-all duration-300 cursor-pointer shadow-sm">
+<span class="material-symbols-outlined text-headline-xl text-primary group-hover:text-on-primary">payments</span>
+<span class="font-headline-sm text-headline-sm">Finance</span>
+<span class="font-label-sm text-label-sm opacity-70">400 Jobs</span>
+</div>
+<div class="bg-surface-container p-lg rounded-xl flex flex-col items-center gap-sm group hover:bg-primary hover:text-on-primary transition-all duration-300 cursor-pointer shadow-sm">
+<span class="material-symbols-outlined text-headline-xl text-primary group-hover:text-on-primary">groups</span>
+<span class="font-headline-sm text-headline-sm">HR &amp; Admin</span>
+<span class="font-label-sm text-label-sm opacity-70">320 Jobs</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Jobs -->
+<section class="py-xl bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-md">
+<h2 class="font-headline-lg text-headline-lg mb-lg">Featured <span class="text-primary">Opportunities</span></h2>
+<div class="flex flex-col gap-md">
+<!-- Job Card 1 -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm border border-outline-variant flex flex-col md:flex-row items-center justify-between gap-md hover:shadow-md transition-shadow group">
+<div class="flex items-center gap-md w-full">
+<div class="w-16 h-16 bg-surface-variant rounded-lg flex items-center justify-center p-sm">
+<span class="material-symbols-outlined text-primary text-headline-lg">hub</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm group-hover:text-primary transition-colors">Senior Frontend Developer</h3>
+<div class="flex items-center gap-sm mt-xs">
+<span class="text-on-surface-variant font-label-md">TechFlow Inc.</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span class="text-on-surface-variant font-label-md flex items-center gap-xs"><span class="material-symbols-outlined text-[16px]">location_on</span>Remote</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between w-full md:w-auto gap-lg">
+<div class="flex flex-col md:items-end">
+<span class="font-label-md text-primary">$120k - $160k</span>
+<span class="text-label-sm text-on-surface-variant">Full-time</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-md px-md py-base rounded-lg hover:bg-primary hover:text-on-primary transition-all shrink-0">View Details</button>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm border border-outline-variant flex flex-col md:flex-row items-center justify-between gap-md hover:shadow-md transition-shadow group">
+<div class="flex items-center gap-md w-full">
+<div class="w-16 h-16 bg-surface-variant rounded-lg flex items-center justify-center p-sm">
+<span class="material-symbols-outlined text-primary text-headline-lg">analytics</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm group-hover:text-primary transition-colors">Product Marketing Manager</h3>
+<div class="flex items-center gap-sm mt-xs">
+<span class="text-on-surface-variant font-label-md">GrowthStack</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span class="text-on-surface-variant font-label-md flex items-center gap-xs"><span class="material-symbols-outlined text-[16px]">location_on</span>New York, NY</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between w-full md:w-auto gap-lg">
+<div class="flex flex-col md:items-end">
+<span class="font-label-md text-primary">$95k - $130k</span>
+<span class="text-label-sm text-on-surface-variant">Hybrid</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-md px-md py-base rounded-lg hover:bg-primary hover:text-on-primary transition-all shrink-0">View Details</button>
+</div>
+</div>
+<!-- Job Card 3 -->
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm border border-outline-variant flex flex-col md:flex-row items-center justify-between gap-md hover:shadow-md transition-shadow group">
+<div class="flex items-center gap-md w-full">
+<div class="w-16 h-16 bg-surface-variant rounded-lg flex items-center justify-center p-sm">
+<span class="material-symbols-outlined text-primary text-headline-lg">shield</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm group-hover:text-primary transition-colors">Security Analyst</h3>
+<div class="flex items-center gap-sm mt-xs">
+<span class="text-on-surface-variant font-label-md">CyberGuard Ltd.</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span class="text-on-surface-variant font-label-md flex items-center gap-xs"><span class="material-symbols-outlined text-[16px]">location_on</span>London, UK</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between w-full md:w-auto gap-lg">
+<div class="flex flex-col md:items-end">
+<span class="font-label-md text-primary">$80k - $110k</span>
+<span class="text-label-sm text-on-surface-variant">On-site</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-md px-md py-base rounded-lg hover:bg-primary hover:text-on-primary transition-all shrink-0">View Details</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Top Companies -->
+<section class="py-xl">
+<div class="max-w-container-max mx-auto px-md">
+<h3 class="font-label-md text-outline uppercase text-center tracking-widest mb-lg">Trusted by World Class Companies</h3>
+<div class="flex flex-wrap justify-center gap-xl grayscale opacity-50">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-headline-xl">brightness_7</span>
+<span class="font-bold text-headline-sm">Solaris</span>
+</div>
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-headline-xl">cloud_queue</span>
+<span class="font-bold text-headline-sm">Cloudy</span>
+</div>
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-headline-xl">eco</span>
+<span class="font-bold text-headline-sm">Leafy</span>
+</div>
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-headline-xl">rocket_launch</span>
+<span class="font-bold text-headline-sm">Orbit</span>
+</div>
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-headline-xl">diamond</span>
+<span class="font-bold text-headline-sm">Gemini</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-xl bg-on-surface text-surface">
+<div class="max-w-container-max mx-auto px-md grid grid-cols-1 md:grid-cols-3 gap-xl">
+<div class="flex flex-col gap-sm text-center">
+<div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-md">
+<span class="material-symbols-outlined text-on-primary text-headline-lg">verified_user</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm">Verified Jobs</h4>
+<p class="font-body-sm opacity-80">Every listing on our platform is manually reviewed to ensure authenticity and trust.</p>
+</div>
+<div class="flex flex-col gap-sm text-center">
+<div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-md">
+<span class="material-symbols-outlined text-on-primary text-headline-lg">apartment</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm">Top Companies</h4>
+<p class="font-body-sm opacity-80">Direct connections with Fortune 500 companies and high-growth technology startups.</p>
+</div>
+<div class="flex flex-col gap-sm text-center">
+<div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-md">
+<span class="material-symbols-outlined text-on-primary text-headline-lg">notifications_active</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm">Instant Alerts</h4>
+<p class="font-body-sm opacity-80">Be the first to apply with personalized job alerts delivered straight to your inbox.</p>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-xl overflow-hidden relative">
+<div class="max-w-container-max mx-auto px-md">
+<div class="bg-surface-container-high p-xl rounded-[32px] relative">
+<span class="material-symbols-outlined text-[80px] absolute top-10 right-10 text-primary opacity-10">format_quote</span>
+<div class="flex flex-col md:flex-row gap-xl items-center">
+<img alt="Testimonial User" class="w-32 h-32 rounded-full object-cover border-4 border-primary/20" data-alt="Close up portrait of a smiling young professional woman with a warm, approachable expression. She has medium-length dark hair and is wearing a stylish light blue blazer. The background is a softly blurred office setting with natural light coming through large windows, creating a clean and premium corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnsCbGDtHqc-QOXuTh_KoRUgKtxfv5LxKeazegy9sYxU0N_2F07LGd-ptRcJvOJt6wfU42H4OxrqLZfyWYxkZmNgwDnX5k4YpYzcIBR6-1imZ8YHqnAmCtpnDQt0hpGCG-kNXHUIfnKis__m1YJZvEJWtc6pV81fg-VwnQ9VixXuvqVmBdmGuXyIiv3gRGijpSBO9_vJvfJgMFRUd-pU22KsAyqFiHV-wkL8CzUk-9PoQOJ9Eaosu4Sr-sOuYFtpcTCla3i_IuoLc"/>
+<div class="flex flex-col gap-md text-center md:text-left">
+<p class="font-body-lg text-headline-sm italic text-on-surface-variant">"CareerConnect transformed my job search. Within two weeks of uploading my resume, I was contacted by three top-tier companies. The interface is clean, efficient, and actually helpful."</p>
+<div>
+<h5 class="font-bold text-headline-sm text-on-surface">Sarah Jenkins</h5>
+<p class="text-primary font-label-md">Senior UX Designer @ Creative Labs</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-xl">
+<div class="max-w-container-max mx-auto px-md">
+<div class="bg-primary rounded-xl p-xl flex flex-col md:flex-row items-center justify-between gap-lg text-on-primary relative overflow-hidden">
+<div class="flex flex-col gap-sm relative z-10">
+<h2 class="font-headline-lg text-headline-lg">Ready to accelerate your career?</h2>
+<p class="font-body-md opacity-90 max-w-md">Upload your resume today and let our AI-powered matching system find the perfect role for you.</p>
+</div>
+<button class="bg-tertiary-container text-on-tertiary-container font-headline-sm px-xl py-md rounded-lg hover:scale-105 transition-all shadow-lg active:scale-95 relative z-10">Upload Your Resume</button>
+<!-- Decorative Circles -->
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-white/10 rounded-full"></div>
+<div class="absolute -left-20 -top-20 w-64 h-64 bg-white/10 rounded-full"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-surface text-surface py-xl border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-md grid grid-cols-1 md:grid-cols-4 gap-lg">
+<div class="flex flex-col gap-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-headline-sm">work</span>
+<span class="font-headline-sm text-headline-sm">CareerConnect</span>
+</div>
+<p class="text-body-sm text-surface-variant leading-relaxed">The world's most trusted recruitment platform, connecting ambitious talent with global opportunities since 2024.</p>
+<div class="flex gap-md mt-md">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">alternate_email</span></a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a>
+</div>
+</div>
+<div class="flex flex-col gap-md">
+<h6 class="font-label-md text-primary uppercase">Candidates</h6>
+<ul class="flex flex-col gap-sm">
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#">Browse Jobs</a></li>
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#">Career Advice</a></li>
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#">Job Alerts</a></li>
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#">Resume Builder</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-md">
+<h6 class="font-label-md text-primary uppercase">Employers</h6>
+<ul class="flex flex-col gap-sm">
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#">Post a Job</a></li>
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#">Hiring Solutions</a></li>
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#">Pricing Plans</a></li>
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#">Success Stories</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-md">
+<h6 class="font-label-md text-primary uppercase">Support</h6>
+<ul class="flex flex-col gap-sm">
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#">Contact Us</a></li>
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-md pt-xl mt-xl border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="text-label-sm text-surface-variant">© 2024 CareerConnect. All rights reserved.</p>
+<div class="flex items-center gap-md">
+<button class="flex items-center gap-xs font-label-md text-surface-variant bg-surface/5 px-md py-base rounded-full hover:bg-surface/10 transition-all">
+<span class="material-symbols-outlined text-[18px]">language</span> English (US)
+                </button>
+</div>
+</div>
+</footer>
+<!-- FAB for Dark Mode -->
+<button class="fixed bottom-10 right-10 w-14 h-14 bg-on-surface text-surface rounded-full shadow-2xl flex items-center justify-center z-50 hover:scale-110 active:scale-95 transition-all group">
+<span class="material-symbols-outlined">dark_mode</span>
+<span class="absolute right-full mr-4 bg-on-surface px-md py-base rounded-lg text-label-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Toggle Dark Mode</span>
+</button>
+</body></html>
